@@ -2,8 +2,16 @@ import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-accordion',
-  templateUrl: './accordion.component.html',
-  styleUrls: ['./accordion.component.css']
+  styleUrls: ['./accordion.component.css'],
+  template:
+    `<div class="{{class}}">
+    <button class="accordion" (click)="toggle()">{{title}}<div class="icon {{icon}}"></div></button>
+    <div class="panel" #panel>
+      <p>
+          {{panelText}}
+      </p>
+    </div>
+  </div>`
 })
 export class AccordionComponent implements OnInit {
 
@@ -13,6 +21,11 @@ export class AccordionComponent implements OnInit {
   @Input() variant = '';
   @Input() disabled = false;
   @ViewChild("panel", { static: false }) panel: ElementRef;
+
+  public panelText = `Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+    aliquip ex ea commodo consequat.`;
 
   private visible = false;
 
