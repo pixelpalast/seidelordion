@@ -8,7 +8,7 @@ import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
     <button class="accordion" (click)="toggle()">{{title}}<div class="icon {{icon}}"></div></button>
     <div class="panel" #panel>
       <p>
-          {{panelText}}
+        {{panelText}}
       </p>
     </div>
   </div>`
