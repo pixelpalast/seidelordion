@@ -3,9 +3,13 @@ import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 @Component({
   selector: 'app-accordion',
   styleUrls: ['./accordion.component.css'],
-  template:
-    `<div class="{{class}}">
-    <button class="accordion" (click)="toggle()">{{title}}<div class="icon {{icon}}"></div></button>
+  template: `
+    <ba-accordion [disabled]="disabled" [label]="{{title}}">
+      <p>{{panelText}}</p>
+    </ba-accordion>
+
+    <div class="{{class}}">
+    <button class="accordion" (click)="toggle()"><div class="icon {{icon}}"></div></button>
     <div class="panel" #panel>
       <p>
         {{panelText}}
@@ -13,6 +17,7 @@ import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
     </div>
   </div>`
 })
+
 export class AccordionComponent implements OnInit {
 
   @Input() icon = '';
