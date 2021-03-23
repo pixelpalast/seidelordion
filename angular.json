@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "seidelordion": {
+    "baaccordiordion": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/seidelordion",
+            "outputPath": "dist/baaccordiordion",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -61,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "seidelordion:build"
+            "browserTarget": "baaccordiordion:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "seidelordion:build:production"
+              "browserTarget": "baaccordiordion:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "seidelordion:build"
+            "browserTarget": "baaccordiordion:build"
           }
         },
         "test": {
@@ -109,16 +109,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "seidelordion:serve"
+            "devServerTarget": "baaccordiordion:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "seidelordion:serve:production"
+              "devServerTarget": "baaccordiordion:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "seidelordion"
+  "defaultProject": "baaccordiordion"
 }
